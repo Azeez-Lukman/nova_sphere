@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>
+    {% block page_title %}  NovaSphere Tech Academy {% endblock %}</title>
+</head>
+<body>
+  <div class="flex justify-between items-center gap-4 py-4 px-12 bg-[#2563EB] text-white">
+    <h2 class="text-lg font-bold">NovaSphere Tech</h2>
+    <nav class="lg:flex hidden items-center gap-4 text-base">
+      <a href="{% url 'home' %}">Home</a> 
+      <a href="{% url 'about' %}">About</a> 
+      <a href="{% url 'courses' %}">Courses</a> 
+      <a href="{% url 'services' %}">Services</a> 
+      <a href="{% url 'faq' %}">FAQ</a>
+    </nav>
+    <a class="bg-[#2564eb39] border border-white shadow-md hover:translate-x-1 hover:translate-y-1 transition-all duration-300 ease-in-out py-1 px-4 rounded-lg font-semibold capitalize lg:block hidden" href="{% url 'contact' %}">Get in touch</a> 
+</div>
+  <hr>
+  {% block content %} 
+  
+  {% endblock %}
+  <hr>
+  <footer class="bg-gradient-to-r from-slate-500 to-[#2563EB] text-white">
+    <div class="max-w-5xl mx-auto p-8">
+      <div class="grid grid-cols-2 items-center gap-4">
+        <div class="flex flex-col gap-2">
+          <h2>NovaSphere Tech Academy</h2>
+          <p>Empowering Future Tech Professionals Through Practical Learning.
+          </p>
+      </div>
+      <div class="">
+        <p><span class="font-semibold">Address:</span> E-Bow Global Computer Academy – Tobi Rentals Bus-stop, Beside Gold-mine Filling Station, Eleyele, Ibadan.</p>
+      </div>
+      </div>
+      <p class="text-center pt-5">@ 2026 NovaSphere Tech Academy </p>
+  </div>
+  </footer>  
+</body>
+</html>

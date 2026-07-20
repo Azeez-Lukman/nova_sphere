@@ -1,0 +1,14 @@
+{% extends 'nova_sphere/base.html' %}
+{% block content %}
+<section>
+  <div>
+    <div>
+      <h2>frequently asked questions and answers</h2>
+      <h3>{{ faq_name|title }}</h3>
+      <p>{{ faq_value }}</p>
+      
+      <a href="{% url 'faq' %}">Back to all FAQ</a>
+    </div>
+  </div>
+</section>
+{% endblock %}
